@@ -145,8 +145,10 @@ router.beforeEach(async (to, from, next) => {
     }
   }
 
-  if (isLoggedIn && to.name !== 'Not Permitted' && !isCrmUser()) {
+  if (false) {
     next({ name: 'Not Permitted' })
+  // if (isLoggedIn && to.name !== 'Not Permitted' && !isCrmUser()) {
+  //   next({ name: 'Not Permitted' })
   } else if (to.name === 'Home' && isLoggedIn) {
     const { views, getDefaultView } = viewsStore()
     await views.promise
