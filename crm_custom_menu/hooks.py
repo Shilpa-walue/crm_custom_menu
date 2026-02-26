@@ -5,6 +5,10 @@ app_description = "CRM Custom Menu"
 app_email = "shilpa@Walue.biz"
 app_license = "mit"
 
+website_route_rules = [
+    {"from_route": "/crm/<path:app_path>", "to_route": "crm"},
+]
+
 # Apps
 # ------------------
 
